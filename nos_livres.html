@@ -53,7 +53,7 @@
       type : 'get',
       dataType : 'json',
      success: function (data) {
-     // data=JSON.parse(data);
+    //  data=JSON.parse(data);
      $.each( data.books,function(index, d){
 
      $('#zone').append('<li><b><img src="' + d.cover + ' "></b></br><b> ' + d.title + '<li><b>' );

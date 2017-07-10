@@ -5,7 +5,12 @@
     font-weight: normal;
     font-style: normal;
 }
-
+body {
+    height: 100%;
+}
+html {
+    height: 100%;
+}
 header {
   position: relative;
   height: 200px;
@@ -17,7 +22,7 @@ header {
   z-index: 100;
   font-family: 'Sketch 3D';
   font-size: 80px;
-  color: purple;
+  color: #800080;
 }
 #logo_r {
 position: absolute;
