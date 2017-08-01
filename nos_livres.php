@@ -10,22 +10,21 @@
       <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
      <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="js/jquery.js"></script>
-     <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
-
+     <script type="text/javascript" src="js/materialize.min.js"></script>
      <!--Let browser know website is optimized for mobile-->
      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
 <img id="logo_r" src="./images/logo_jrn.gif" alt="logo">
 <h3 id="titre">Library Kids</h3>
-<div id="superposition"></div>
+  <div id="superposition"></div>
   <div id="fonts"></div>
   <nav>
      <div class="nav-wrapper">
          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
        <ul class="menu right hide-on-med-and-down">
-         <li><a class="waves-effect waves-light btn btn-accueil">Accueil</a></li>
-         <li><a class="waves-effect waves-light btn btn-accueil">Nos livres<i class="material-icons right">cloud</i></a></li>
+         <li><a href="index.php" class="waves-effect waves-light btn btn-accueil">Accueil</a></li>
+         <li><a href="nos_livres.php" class="waves-effect waves-light btn btn-accueil">Nos livres<i class="material-icons right">cloud</i></a></li>
          <li><a class="waves-effect waves-light btn btn-accueil">Actualités</a></li>
          <li><a class="waves-effect waves-light btn  btn-accueil">Se connecter</a></li>
        </ul>
@@ -36,50 +35,46 @@
         <li><a href="identification.php">Se connecter</a></li>
       </ul>
      </div>
-  </nav>
-<main>
-  <h2>Recherche avancée</h2>
-  <div class="input-field col s12">
-      <select>
-        <option value="1">Romans</option>
-        <option value="2">Bandes-dessinées</option>
-        <option value="3">Autres</option>
-      </select>
-      <label>Genres</label>
-    </div>
+   </nav>
+  <div class="carousel">
+<!--
+      <a class="carousel-item" href="#one!"><img src="https://www.livralire.org/wp-content/uploads/2017/05/reine-coquillage.jpg"</a>
+      <a class="carousel-item" href="#two!"><img src="https://www.livralire.org/wp-content/uploads/2017/05/penelope.jpg"></a>
+      <a class="carousel-item" href="#three!"><img src="https://www.livralire.org/wp-content/uploads/2017/05/soupeatout.jpg"></a>
+      <a class="carousel-item" href="#four!"><img src="https://www.livralire.org/wp-content/uploads/2017/05/picpiquenique.jpg"></a>
+      <a class="carousel-item" href="#five!"><img src="https://www.livralire.org/wp-content/uploads/2017/04/glory.jpg"></a>
+      <a class="carousel-item" href="#five!"><img src="https://www.livralire.org/wp-content/uploads/2017/03/parkingnuit.jpg"></a>
+      <a class="carousel-item" href="#five!"><img src=""></a>
+      -->
+  </div>
+<button id="test">TEST AJAX</button>
+<ul id="zone"></ul>
 
-    <div class="input-field col s12">
-      <select>
-        <option value="1">0-3 ans</option>
-        <option value="2">3-6 ans</option>
-        <option value="3">6-10 ans</option>
-        <option value="3">10-14 ans</option>
-      </select>
-      <label>Tranche d'âge</label>
-    </div>
-    <div class="input-field col s12">
-      <select>
-        <option value="1">Numériques</option>
-        <option value="2">Audios</option>
-        <option value="3">Classiques</option>
-      </select>
-      <label>Supports</label>
-    </div>
-<form>
-  <input type="textarea" name="auteur">Auteur</input>
-  <input type="textarea" name="édition">Edition</input>
-  <input type="textarea" name="titre">Titre</input>
-</form>
-<button class="btn waves-effect waves-light" type="submit" name="action">Recherche
-    <i class="material-icons right">send</i>
-  </button>
-<script>
-$( document ).ready(function(){
-   $(".button-collapse").sideNav();
-   $('select').material_select();
-});
-</script>
-</main>
+ <script>
+     //dddddddd
+   $(document).ready(function(){
+    $(".button-collapse").sideNav();
+    $('.carousel').carousel();
+       });
+
+   $.ajax({
+      url : 'https:raw.githubusercontent.com/Coda-Wikicoda/Json-bibliotheque/master/list.json',
+      type : 'get',
+      dataType : 'json',
+     success: function (data) {
+    //  data=JSON.parse(data);
+     //$.each(data.books,function(index, d){
+         //creation d'une condition pour ne voir qu'un certain nombre de couvertures
+         for (var i=0; i<8; i++) {
+             $('.carousel').append('<a class="carousel-item" href=""><img src="' + data.books[i].cover + ' "></b></br><b><span id="titrelivre"> ' + data.books[i].title + '<b></span>');
+         }
+         },
+     error : function() {
+         $('#zone').html('FATAL ERROR');
+     }
+     });
+
+ </script>
 
   <footer class="page-footer">
       <div class="container">
@@ -99,8 +94,7 @@ $( document ).ready(function(){
       </div>
       <div class="footer-copyright">
           <div class="container">
-              © 2017 Copyright Text
-              <a class="grey-text text-lighten-4 right" href="#!"></a>
+              © 2017 Copyright
           </div>
       </div>
   </footer>

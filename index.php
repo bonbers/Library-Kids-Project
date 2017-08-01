@@ -21,7 +21,6 @@
 
 <body>
 <header>
-
     <img id="logo_r" src="./images/logo_jrn.gif" alt="logo">
     <h3 id="titre">Library Kids</h3>
     <div id="superposition">
@@ -30,27 +29,25 @@
     </div>
 </header>
 
-
 <nav>
     <div class="nav-wrapper">
         <a href="#" data-activates="mobile-demo" class="btn btn-floating pulse button-collapse"><i class="btn-menu material-icons">menu</i></a>
         <ul class="menu right hide-on-med-and-down">
-            <li><a href="index.html" class="waves-effect waves-light btn btn-accueil">Accueil</a></li>
-            <li><a href="nos_livres.html" class="waves-effect waves-light btn btn-accueil">Nos livres<i class="material-icons right">cloud</i></a></li>
+            <li><a href="index.php" class="waves-effect waves-light btn btn-accueil">Accueil</a></li>
+            <li><a href="nos_livres.php" class="waves-effect waves-light btn btn-accueil">Nos livres<i class="material-icons right">cloud</i></a></li>
             <li><a class="waves-effect waves-light btn btn-accueil">Actualités</a></li>
             <li><a class="waves-effect waves-light btn  btn-accueil">Se connecter</a></li>
             <li><a class="waves-effect waves-light btn  btn-accueil" id="create">Ajout livre</a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
             <li><a href="index.php">Accueil</a></li>
-            <li><a href="nos_livres.html">Nos livres</a></li>
+            <li><a href="nos_livres.php">Nos livres</a></li>
             <li><a href="collapsible.html">Actualités</a></li>
             <li><a href="mobile.html">Se connecter</a></li>
             <li><a id="create">Ajout livre</a></li>
         </ul>
     </div>
 </nav>
-
 
 <script>
     $(document).ready(function() {
@@ -61,13 +58,11 @@
 
 <div class="main">
     <div class="container2"></div>
-
     <div class="container"></div>
 </div>
 <div class="second"></div>
 
 <script>
-
     $("#create").click(function() {
         $(".container2").html(
             '<h3>Ajout livre</h3>' +
@@ -104,9 +99,7 @@
             '<button id="btn" type="submit" name="submit">Ajouter</button>' +
             '</form>'
         );
-
         $('select').material_select();
-
 
 //        function chargement(){
 //            $.ajax({
@@ -137,39 +130,34 @@
                 success: function (response) {
                     // La réponse du serveur
                     alert("Livre ajouté !");
-
                 }
             });
         });
     });
-// -----Update
+    </script>
 
-
-//        $("#reader").click(function(){
-//            chargement();
-//        });
-//    });
-//
-//
-//    // -------------------------------------------------------------------------------------------------- //
-//
-//    $('.container2,.container').hide()
-//    $('#create').on('click', function(){
-//        $(this).toggleClass('active');
-//        $('.container2').slideToggle(600);
-//        $('.container').slideToggle(600);
-//    });
-//    $('.second').hide()
-//    $("#reader").on('click', function(){
-//        $(this).toggleClass('active');
-//        $('.second').slideToggle(600);
-//    });
-
-
-</script>
-
-
-
+    <footer class="page-footer">
+        <div class="container">
+        <div class="row">
+        <div class="col l6 s12">
+        <h5 class="white-text"></h5>
+    <p class="grey-text text-lighten-4">F.A.Q. / Contact </p>
+    </div>
+    <div class="col l4 offset-l2 s12">
+        <h5 class="white-text">Nous suivre.... </h5>
+        <ul>
+        <li><a class="grey-text text-lighten-3" href="#!">Facebook</a></li>
+    <li><a class="grey-text text-lighten-3" href="#!">Twitter</a></li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            © 2017 Copyright Text
+    <a class="grey-text text-lighten-4 right" href="#!"></a>
+    </div>
+    </div>
+    </footer>
 </body>
-
 </html>
