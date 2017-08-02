@@ -1,71 +1,58 @@
-<!DOCTYPE html>
-<html lang="fr">
+<?php include('header.php'); ?>
 
-<head>
-    <meta charset="utf-8">
-    <!--Import Google Icon Font-->
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
-    <link href="https://fonts.googleapis.com/css?family=Londrina+Sketch" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Oswald:700" rel="stylesheet">
-    <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-    <link type="text/css" rel="stylesheet" href="style.css" />
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</head>
 
-<body>
-<header>
-
-    <img id="logo_r" src="./images/logo_jrn.gif" alt="logo">
-    <h3 id="titre">Library Kids</h3>
-    <div id="superposition">
+    <div class="moving-zone">
+        <div class="popup">
+            <div class="popup-content">
+                <div class="popup-text">
+                    <a href="nos_livres.php"><b>Accédez à nos livres !!!<b></a>
+                </div>
+            </div>
+        </div>
     </div>
-    <div id="fonts">
+
+
+
+
+    <div class='wrap'>
+        <div class='content'>
+            <h2>Bonjour</h2>
+            <p>Explications ici</p>
+        </div>
     </div>
-</header>
+    <h1>Comment s'enregistrer</h1>
+    <a class="croix btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
 
 
-<nav>
-    <div class="nav-wrapper">
-        <a href="#" data-activates="mobile-demo" class="btn btn-floating pulse button-collapse"><i class="btn-menu material-icons">menu</i></a>
-        <ul class="menu right hide-on-med-and-down">
-            <li><a href="index.html" class="waves-effect waves-light btn btn-accueil">Accueil</a></li>
-            <li><a href="nos_livres.html" class="waves-effect waves-light btn btn-accueil">Nos livres<i class="material-icons right">cloud</i></a></li>
-            <li><a class="waves-effect waves-light btn btn-accueil">Actualités</a></li>
-            <li><a class="waves-effect waves-light btn  btn-accueil">Se connecter</a></li>
-            <li><a class="waves-effect waves-light btn  btn-accueil" id="create">Ajout livre</a></li>
-        </ul>
-        <ul class="side-nav" id="mobile-demo">
-            <li><a href="index.php">Accueil</a></li>
-            <li><a href="nos_livres.html">Nos livres</a></li>
-            <li><a href="collapsible.html">Actualités</a></li>
-            <li><a href="mobile.html">Se connecter</a></li>
-            <li><a id="create">Ajout livre</a></li>
-        </ul>
-    </div>
-</nav>
+    <script>
 
 
-<script>
-    $(document).ready(function() {
-        $(".button-collapse").sideNav();
-        $('select').material_select();
+    var moveForce = 30; // max popup movement in pixels
+    var rotateForce = 20; // max popup rotation in deg
+
+    $(document).mousemove(function(e) {
+        var docX = $(document).width();
+        var docY = $(document).height();
+
+        var moveX = (e.pageX - docX/2) / (docX/2) * -moveForce;
+        var moveY = (e.pageY - docY/2) / (docY/2) * -moveForce;
+
+        var rotateY = (e.pageX / docX * rotateForce*2) - rotateForce;
+        var rotateX = -((e.pageY / docY * rotateForce*2) - rotateForce);
+
+        $('.popup')
+            .css('left', moveX+'px')
+            .css('top', moveY+'px')
+            .css('transform', 'rotateX('+rotateX+'deg) rotateY('+rotateY+'deg)');
     });
+
+
 </script>
+    <script>  $('.croix').on('click', function(){
+            $('.wrap, .croix').toggleClass('active');
 
-<div class="main">
-    <div class="container2"></div>
-
-    <div class="container"></div>
-</div>
-<div class="second"></div>
-
+            return false;
+        });</script>
 <script>
 
     $("#create").click(function() {
@@ -142,34 +129,7 @@
             });
         });
     });
-// -----Update
-
-
-//        $("#reader").click(function(){
-//            chargement();
-//        });
-//    });
-//
-//
-//    // -------------------------------------------------------------------------------------------------- //
-//
-//    $('.container2,.container').hide()
-//    $('#create').on('click', function(){
-//        $(this).toggleClass('active');
-//        $('.container2').slideToggle(600);
-//        $('.container').slideToggle(600);
-//    });
-//    $('.second').hide()
-//    $("#reader").on('click', function(){
-//        $(this).toggleClass('active');
-//        $('.second').slideToggle(600);
-//    });
-
 
 </script>
 
-
-
-</body>
-
-</html>
+<?php include('footer.php');

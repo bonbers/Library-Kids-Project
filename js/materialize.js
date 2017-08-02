@@ -1525,7 +1525,7 @@ if (jQuery) {
         });
         $tabs_wrapper = $tabs_content.wrapAll('<div class="tabs-content carousel"></div>');
         $tabs_content.css('display', '');
-        $('.tabs-content.carousel').carousel({
+        $('.tabs-content.±').carousel({
           fullWidth: true,
           noWrap: true,
           onCycleTo: function(item) {
