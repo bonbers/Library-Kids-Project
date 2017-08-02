@@ -168,8 +168,7 @@
         <div class="row">
         <div class="col l6 s12">
         <h5 class="white-text"></h5>
-    <p class="grey-text text-lighten-4">F.A.Q. / Contact </p>
-    </div>
+            <a class="grey-text text-lighten-4" href="contact.php">Contact </a>    </div>
     <div class="col l4 offset-l2 s12">
         <h5 class="white-text">Nous suivre.... </h5>
         <ul>

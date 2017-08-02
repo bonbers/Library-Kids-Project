@@ -40,7 +40,7 @@
           <button class="btn waves-effect waves-light" type="submit" name="action">Retour
           <i class="material-icons right"></i>
         </button>
-      <p>Médiathèque Library KIds<br/>17 Avenue Charles Pouzot<br/>
+      <p>Médiathèque Library Kids<br/>17 Avenue Charles Pouzot<br/>
         30 000 Alès<br/><br/>Tel.: 06.06.78.90.89<br/>contact@librarykids.com<br/>
       Plan d'accès</p>
 
@@ -93,8 +93,8 @@
   </form>
   </div>
     </form>
-    <button class="btn waves-effect waves-light" type="submit" name="action">Envoyer
-        <i class="material-icons right"></i>
+    <button type="submit" class="btn waves-effect waves-light" name="action">Envoyer
+        <i class="material-icons right" href="index.php"></i>
     </button>
   </div>
     </main>
@@ -103,7 +103,7 @@
             <div class="row">
                 <div class="col l6 s12">
                     <h5 class="white-text"></h5>
-                    <p class="grey-text text-lighten-4">F.A.Q. / Contact </p>
+                    <a class="grey-text text-lighten-4" href="contact.php">Contact </a>            </div>
                 </div>
                 <div class="col l4 offset-l2 s12">
                     <h5 class="white-text">Nous suivre.... </h5>
