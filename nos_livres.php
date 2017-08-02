@@ -25,8 +25,8 @@
        <ul class="menu right hide-on-med-and-down">
          <li><a href="index.php" class="waves-effect waves-light btn btn-accueil">Accueil</a></li>
          <li><a href="nos_livres.php" class="waves-effect waves-light btn btn-accueil">Nos livres<i class="material-icons right">cloud</i></a></li>
-         <li><a class="waves-effect waves-light btn btn-accueil">Actualités</a></li>
-         <li><a class="waves-effect waves-light btn  btn-accueil">Se connecter</a></li>
+         <li><a href="actus.php"><a class="waves-effect waves-light btn btn-accueil">Actualités</a></li>
+         <li><a href="identification.php"><a class="waves-effect waves-light btn  btn-accueil">Se connecter</a></li>
        </ul>
        <ul class="side-nav" id="mobile-demo">
         <li><a href="index.php">Accueil</a></li>
@@ -47,11 +47,11 @@
       <a class="carousel-item" href="#five!"><img src=""></a>
       -->
   </div>
-<button id="test">TEST AJAX</button>
-<ul id="zone"></ul>
+
+<!--<button id="test">TEST AJAX</button>
+<ul id="zone"></ul>-->
 
  <script>
-     //dddddddd
    $(document).ready(function(){
     $(".button-collapse").sideNav();
     $('.carousel').carousel();
@@ -73,7 +73,6 @@
          $('#zone').html('FATAL ERROR');
      }
      });
-
  </script>
 
   <footer class="page-footer">
@@ -81,7 +80,7 @@
           <div class="row">
               <div class="col l6 s12">
                   <h5 class="white-text"></h5>
-                  <p class="grey-text text-lighten-4">F.A.Q. / Contact </p>
+                  <a class="grey-text text-lighten-4" href="contact.php">Contact </a>
               </div>
               <div class="col l4 offset-l2 s12">
                   <h5 class="white-text">Nous suivre.... </h5>

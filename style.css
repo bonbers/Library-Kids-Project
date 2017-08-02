@@ -35,12 +35,26 @@ nav .nav-wrapper {
   position: relative;
   height: 45%;
 }
+
+
+.input-field {
+  float: right;
+  z-index: auto;
+  background-color: pink;
+  border-color: hotpink;
+}
+
+.material-icons {
+  color: black;
+}
+
+
+
 nav {
   background-color: inherit;
   width: 70%;
   margin: auto;
   box-shadow: none;
-
 }
 nav a {
   color : black;
@@ -80,9 +94,7 @@ nav a {
 .btn-menu{
   border: none !important;
 }
-.material-icons {
-  border : 1px solid black;
-}
+
 li img {
   width: 10%;
 }

@@ -37,17 +37,44 @@
             <li><a href="nos_livres.php" class="waves-effect waves-light btn btn-accueil">Nos livres<i class="material-icons right">cloud</i></a></li>
             <li><a class="waves-effect waves-light btn btn-accueil">Actualités</a></li>
             <li><a class="waves-effect waves-light btn  btn-accueil">Se connecter</a></li>
-            <li><a class="waves-effect waves-light btn  btn-accueil" id="create">Ajout livre</a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
             <li><a href="index.php">Accueil</a></li>
             <li><a href="nos_livres.php">Nos livres</a></li>
-            <li><a href="collapsible.html">Actualités</a></li>
-            <li><a href="mobile.html">Se connecter</a></li>
-            <li><a id="create">Ajout livre</a></li>
+            <li><a href="actus.php">Actualités</a></li>
+            <li><a href="identification.php">Se connecter</a></li>
         </ul>
     </div>
 </nav>
+
+
+<!--mise en place de la barre de recherche -->
+<div class="nav-wrapper">
+    <form>
+        <div class="input-field">
+            <input id="search" placeholder="recherche" type="search" required>
+            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+            <a href="rech-avcee.php"> <input type="button" onclick="" value="GO" /></a>
+        </div>
+    </form>
+</div>
+
+
+<!--mise en place de la newsletter -->
+<div class="row">
+    <div class="col s12 m6">
+        <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+                <span class="card-title">S'abonner à la Newsletter</span>
+                <input id="email" type="email" class="validate">
+                <input type="button" onclick="" value="OK"/>
+                <label for="email" data-error="badformat" data-success="okmail">Email</label>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
 <script>
     $(document).ready(function() {
@@ -154,7 +181,7 @@
     </div>
     <div class="footer-copyright">
         <div class="container">
-            © 2017 Copyright Text
+            © 2017 Copyright
     <a class="grey-text text-lighten-4 right" href="#!"></a>
     </div>
     </div>
