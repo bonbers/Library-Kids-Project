@@ -1525,11 +1525,7 @@ if (jQuery) {
         });
         $tabs_wrapper = $tabs_content.wrapAll('<div class="tabs-content carousel"></div>');
         $tabs_content.css('display', '');
-<<<<<<< HEAD
-        $('.tabs-content.±').carousel({
-=======
         $('.tabs-content.carousel').carousel({
->>>>>>> nad
           fullWidth: true,
           noWrap: true,
           onCycleTo: function(item) {
