@@ -1,4 +1,5 @@
-<?php include('header.php'); ?>
+<?php include('header.php');
+?>
 
 <div class="connect">
     <h2 id="log">Connexion</h2>
@@ -16,13 +17,12 @@
                     <label for="password">Mot de passe</label>
                 </div>
             </div>
-
         </form>
     </div>
 </div>
 
-
     <div class="section"></div>
     <div class="section"></div>
 
-<?php include ('footer.php'); ?>
+<?php include ('footer.php');
+?>

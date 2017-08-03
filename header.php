@@ -17,7 +17,6 @@
 
 <body>
 <header>
-
     <img id="logo_r" src="./images/logo_jrn.gif" alt="logo">
     <h3 id="titre">Library Kids</h3>
     <div id="superposition">
@@ -25,7 +24,6 @@
     <div id="fonts">
     </div>
 </header>
-
 
 <nav>
     <div class="nav-wrapper">
@@ -35,18 +33,15 @@
             <li><a href="nos_livres.php" class="waves-effect waves-light btn btn-accueil">Nos livres<i class="material-icons right">cloud</i></a></li>
             <li><a class="waves-effect waves-light btn btn-accueil">Actualités</a></li>
             <li><a href="login.php" class="waves-effect waves-light btn  btn-accueil">Se connecter</a></li>
-<!--            <li><a class="waves-effect waves-light btn  btn-accueil" id="create">Ajout livre</a></li>-->
         </ul>
         <ul class="side-nav" id="mobile-demo">
             <li><a href="index.php">Accueil</a></li>
             <li><a href="nos_livres.php">Nos livres</a></li>
             <li><a href="collapsible.html">Actualités</a></li>
             <li><a href="login.php">Se connecter</a></li>
-<!--            <li><a id="create">Ajout livre</a></li>-->
         </ul>
     </div>
 </nav>
-
 
 <script>
     $(document).ready(function() {
@@ -57,7 +52,6 @@
 
 <div class="main">
     <div class="container2"></div>
-
     <div class="container"></div>
 </div>
 <div class="second"></div>
